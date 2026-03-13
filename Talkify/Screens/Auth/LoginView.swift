@@ -262,10 +262,16 @@ struct SignUpView: View {
                 }
                 
                 // Terms
-                Text("By signing up, you agree to our Terms of Service and Privacy Policy")
-                    .font(.caption)
-                    .foregroundColor(.textSecondary)
-                    .multilineTextAlignment(.center)
+                Button(action: {
+                    if let url = URL(string: "https://github.com/oneil06/Talkify/blob/main/PRIVACY.md") {
+                        UIApplication.shared.open(url)
+                    }
+                }) {
+                    Text("By signing up, you agree to our Terms of Service and Privacy Policy")
+                        .font(.caption)
+                        .foregroundColor(.textSecondary)
+                        .multilineTextAlignment(.center)
+                }
                 
                 // Apple Sign In Option
                 HStack {

@@ -268,6 +268,9 @@ struct SettingsRow: View {
 
 // MARK: - Help Section
 struct HelpSection: View {
+    @State private var showPrivacyPolicy = false
+    @State private var showTermsOfService = false
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("Help & Support")
@@ -277,8 +280,16 @@ struct HelpSection: View {
             VStack(spacing: 0) {
                 SettingsRow(icon: "questionmark.circle", title: "FAQ", subtitle: nil) {}
                 SettingsRow(icon: "envelope", title: "Contact Us", subtitle: nil) {}
-                SettingsRow(icon: "doc.text", title: "Privacy Policy", subtitle: nil) {}
-                SettingsRow(icon: "doc.text", title: "Terms of Service", subtitle: nil) {}
+                SettingsRow(icon: "doc.text", title: "Privacy Policy", subtitle: nil) {
+                    if let url = URL(string: "https://github.com/oneil06/Talkify/blob/main/PRIVACY.md") {
+                        UIApplication.shared.open(url)
+                    }
+                }
+                SettingsRow(icon: "doc.text", title: "Terms of Service", subtitle: nil) {
+                    if let url = URL(string: "https://github.com/oneil06/Talkify/blob/main/PRIVACY.md") {
+                        UIApplication.shared.open(url)
+                    }
+                }
             }
             .background(
                 RoundedRectangle(cornerRadius: 16)
