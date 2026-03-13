@@ -286,7 +286,7 @@ struct HelpSection: View {
                     }
                 }
                 SettingsRow(icon: "doc.text", title: "Terms of Service", subtitle: nil) {
-                    if let url = URL(string: "https://github.com/oneil06/Talkify/blob/main/PRIVACY.md") {
+                    if let url = URL(string: "https://github.com/oneil06/Talkify/blob/main/TERMS.md") {
                         UIApplication.shared.open(url)
                     }
                 }
