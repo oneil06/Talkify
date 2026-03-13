@@ -1,0 +1,34 @@
+# Xcode
+.DS_Store
+build/
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+DerivedData/
+
+# Swift Package Manager
+.swiftpm/
+Packages/
+
+# CocoaPods
+Pods/
+
+# IDE
+.vscode/
+.idea/
+
+# Build outputs
+build/
+*.ipa
+*.app
+*.dSYM.zip
+
+# Secrets (add your API keys here)
+# Talkify/Services/APIKeys.swift
+
+# macOS
+*.log
+
+# GitHub
+README.md
+LICENSE
